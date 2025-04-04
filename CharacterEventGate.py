@@ -1,12 +1,11 @@
 from DLAuto import Auto
 import time
 
-duel = Auto()
-
 # Adjust as needed
 count = 15
 
 for i in range(0, count):
+    duel = Auto()
     duel.clickCenterUntilFind("Images/duel_button.png", 0.6, 20, modifier=[300, 0])
     duel.clickCenterUntilFind("Images/auto_duel.png")
     duel.clickCenterUntilFind("Images/ok_button.png", 0.7, 100)
