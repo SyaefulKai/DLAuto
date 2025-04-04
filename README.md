@@ -1,6 +1,10 @@
 # DLAuto
 An automation for Yu-Gi-Oh! DUEL LINKS.
 
+# Features
+- **Normal Gate Farming** ✅  
+- **Character Event Gate Farming** ✅  
+
 # How To Install & Run
 ### 1. Clone the Repository
 Clone this repository and navigate to the project directory:  
@@ -19,7 +23,7 @@ Install the required dependencies:
 pip install -r requirements.txt
 ```
 ### 4. Open Duel Links
-Launch Yu-Gi-Oh! DUEL LINKS and navigate to the gate that you want to auto farm.
+Launch Yu-Gi-Oh! DUEL LINKS, set it to full screen with 16:9 ratio and navigate to the gate that you want to auto farm.
 ### 5. Run the script
 ```bash
 python main.py
