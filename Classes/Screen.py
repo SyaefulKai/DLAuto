@@ -39,13 +39,17 @@ class Screen:
 
     def captureWindow(self, grayscale = False):
         
-        window = self.getWindow().rectangle()
+        window = self.getWindow()
+        rectangle = window.rectangle()
+
+        # It will open Duel Links
+        window.set_focus()
 
         monitor = {
-            "left": window.left,
-            "top": window.top,
-            "width": window.width(),
-            "height": window.height()
+            "left": rectangle.left,
+            "top": rectangle.top,
+            "width": rectangle.width(),
+            "height": rectangle.height()
         }
 
         with mss.mss() as sct:
