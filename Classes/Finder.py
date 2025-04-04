@@ -5,6 +5,9 @@ import cv2 as cv
 
 class Finder(Screen, ImageProcessor):
 
+    def __init__(self):
+        super().__init__()
+
     def find(self, template, threshold=0.8, preprocess = True):
         """
         Match given template with screenshot of Duel Links instance
@@ -29,13 +32,12 @@ class Finder(Screen, ImageProcessor):
         min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
 
         if max_val < threshold:
-            print(f"Accuracy is too low: {round(max_val)} ({template})")
+            print(f"Accuracy is too low: {max_val} ({template})")
             return None  
  
         w, h = target.shape[::-1]
 
         top_left = max_loc
         bottom_right = (top_left[0] + w, top_left[1] + h)
-        cv.rectangle(screenshot, top_left, bottom_right, (255, 255, 255), 10)
 
         return [top_left[0] + (w // 2), top_left[1] + (h // 2)]

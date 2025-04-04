@@ -4,9 +4,9 @@ import pyautogui as gui
 class Clicker(Finder):
 
     def clickCenterUntilFind(self, template, threshold = 0.8, max_attempt = 10, delay = 1, preprocess = True, modifier = [0, 0]):
-        finder = Finder()
+
         while max_attempt > 0:
-            coor = finder.find(template, threshold, preprocess)
+            coor = self.find(template, threshold, preprocess)
             if coor is not None:
                 coor[0] -= modifier[0]
                 coor[1] -= modifier[1]
@@ -14,7 +14,11 @@ class Clicker(Finder):
                 return True
                 break
             else:
-                gui.click(self.getWindowCenter())
+                center = self.getWindowCenter()
+                center[0] -= modifier[0]
+                center[1] -= modifier[1]
+                print(center)
+                gui.click(center)
             max_attempt -= 1
 
     def clickCenter(self, amount, duration=0.2, modifier = [0, 0]):
