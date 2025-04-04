@@ -8,7 +8,7 @@ Clone this repository and navigate to the project directory:
 git clone https://github.com/SyaefulKai/DLAuto.git && cd DLAuto
 ```
 ### 2. Create and Activate Virtual Environment (Optional)
-It is recommended to use a virtual environment:
+It is recommended to use a virtual environment, although this step is optional:
 ```bash
 python -m venv .venv
 ./.venv/Scripts/activate
@@ -18,7 +18,18 @@ Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-### 4. Run the script
+### 4. Open Duel Links
+Launch Yu-Gi-Oh! DUEL LINKS and navigate to the gate that you want to auto farm.
+### 5. Run the script
 ```bash
 python main.py
 ```
+
+# How to Contribute
+Your contributions are highly appreciated! 😄
+- Fork this repository
+- Clone your forked repository
+- Create a new branch
+- Make your changes
+- Push the changes to your branch
+- Create a pull request
