@@ -8,8 +8,6 @@ class Clicker(Finder):
         while max_attempt > 0:
             coor = self.find(template, threshold, preprocess)
             if coor is not None:
-                coor[0] -= modifier[0]
-                coor[1] -= modifier[1]
                 gui.click(coor)
                 return True
                 break
