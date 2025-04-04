@@ -1,0 +1,17 @@
+from DLAuto import Auto
+import time
+
+duel = Auto()
+
+# Adjust as needed
+count = 15
+
+for i in range(0, count):
+    duel.clickCenterUntilFind("Images/duel_button.png", 0.6, 20, modifier=[300, 0])
+    duel.clickCenterUntilFind("Images/auto_duel.png")
+    duel.clickCenterUntilFind("Images/ok_button.png", 0.7, 100)
+    print("Next button...")
+    duel.clickCenterUntilFind("Images/next_button.png", 0.8, 10)
+    time.sleep(2)
+    print("Next BUtton (2)")
+    duel.clickCenterUntilFind("Images/next_button.png", 0.8, 10)
