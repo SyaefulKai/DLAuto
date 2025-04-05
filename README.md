@@ -5,6 +5,11 @@ An automation for Yu-Gi-Oh! DUEL LINKS.
 - **Normal Gate Farming** ✅  
 - **Character Event Gate Farming** ✅  
 
+# Prerequisite
+Before running this project, make sure you have installed:
+1. [Python](https://www.python.org/downloads/)
+2. [Git](https://git-scm.com/downloads) (Optional)
+
 # How To Install & Run
 ### 1. Clone the Repository
 Clone this repository and navigate to the project directory:  
