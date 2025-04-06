@@ -9,6 +9,9 @@ An automation for Yu-Gi-Oh! DUEL LINKS.
 Before running this project, make sure you have installed:
 1. [Python](https://www.python.org/downloads/)
 2. [Git](https://git-scm.com/downloads) (Optional)
+3. A deck that contains monsters that can be Normal Summoned with 1700 or more ATK (Normal Monsters are more preferable).
+   ![image](https://github.com/user-attachments/assets/30971128-e9ce-4446-92d3-c877c4b55f04)
+
 
 # How To Install & Run
 ### 1. Clone the Repository
