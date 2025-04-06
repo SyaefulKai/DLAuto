@@ -10,9 +10,10 @@ class Duel(Clicker, Finder):
         super().__init__()
         self.monster_count = 0
         
-        # Might automatically change in the future
+        # Based on 1920x1080
         self.main_monster_zone = [[836, 610], [961, 609], [1084, 610]]
-        self.opponent_monster_zone = [[842, 375], [958, 379], [1076, 382]]
+        
+        # self.opponent_monster_zone = [[842, 375], [958, 379], [1076, 382]]
         self.first_card_selection_coordinate = [703, 849]
         
         self.is_first_turn = False
@@ -22,6 +23,22 @@ class Duel(Clicker, Finder):
         # Adjust the duration of the clicks
         self.global_duration = 0.5
         
+    def dinamic_coor(self):
+        width = self.screenSize.width()
+        height = self.screenSize.height()
+        base_width = 1920
+        base_height = 1080
+
+        self.main_monster_zone = [
+            [int(x / base_width * width), int(y / base_height * height)]
+            for x, y in self.main_monster_zone
+        ]
+        
+        x, y = self.first_card_selection_coordinate
+        self.first_card_selection_coordinate = [
+            int(x / base_width * width),
+            int(y / base_height * height)
+        ]
 
     def attack(self):
         """Attack the opponent's monster and check for win condition."""
