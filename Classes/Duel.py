@@ -67,7 +67,13 @@ class Duel(Clicker, Finder):
         rect = self.getWindow().rectangle()
         # Click on the bottom of the screen to choose the monster
         gui.click([(rect.width() // 2) - 10, rect.height() - 75], duration=self.global_duration)
-        gui.click(self.find("Images/normal_summon.png", 0.6), duration=self.global_duration)
+        
+        while True:
+            x = self.find("Images/normal_summon.png", 0.6)
+            if x is not None:
+                gui.click(x)
+                break
+            
         gui.click(self.main_monster_zone[self.monster_count], duration=self.global_duration)
         self.monster_count += 1
 
